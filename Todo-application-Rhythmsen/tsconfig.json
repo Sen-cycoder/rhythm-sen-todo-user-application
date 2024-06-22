@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Target ECMAScript 6
+    "module": "commonjs", // Output module format for Node.js
+    "lib": ["es6"], // Include ES6 library features
+    "resolveJsonModule": true, // Allow importing JSON files
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "pretty": true, // Pretty-print output
+    "sourceMap": true, // Generate source maps
+    "outDir": "./dist", // Output directory for compiled files
+    "rootDir": "./src", // Root directory of source files
+    "strict": true, // Enable all strict type-checking options
+    "noImplicitAny": true, // Disallow implicit any types
+    "moduleResolution": "node", // Use Node.js module resolution strategy
+    "baseUrl": "./src", // Base URL for module resolution
+    "esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in file names
+    "typeRoots": ["./node_modules/@types", "./@types"], // Type definition roots
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@config/*": ["config/*"],
+      "@controllers/*": ["controllers/*"],
+      "@modules/*": ["modules/*"],
+      "@middleware/*": ["middleware/*"],
+      "@routes/*": ["routes/*"],
+      "@services/*": ["services/*"],
+      "@validations/*": ["validations/*"]
+    }
+  },
+  "include": ["src/**/*"], // Include all TypeScript files under src directory
+  "exclude": ["node_modules"] // Exclude node_modules directory from compilation
+}
